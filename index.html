@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molab Screens dla Gabinetów Weterynaryjnych | Ekrany reklamowe</title>
+    <meta name="description" content="Digital signage dla weterynarii. Edukuj właścicieli, promuj usługi, buduj zaufanie. 17 minut uwagi podczas wizyty to Twoja szansa na wzrost przychodu.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --primary-dark: #1B5E20;
+            --secondary: #4CAF50;
+            --accent: #FF9800;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('images/hero-poczekalnia.png') center/cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            color: white;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            color: var(--accent);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-tag {
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .problem-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .problem-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .problem-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .problem-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Stats Banner */
+        .stats-banner {
+            background: var(--dark);
+            padding: 4rem 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+        }
+        
+        .stats-grid .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stats-grid .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+        
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .solution-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .solution-text h2 span {
+            color: var(--primary);
+        }
+        
+        .solution-text p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .benefit-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--dark);
+        }
+        
+        .benefit-text p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin: 0;
+        }
+        
+        .solution-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .solution-gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .solution-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Use Cases */
+        .use-cases {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+        
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .use-case-card {
+            background: var(--light);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .use-case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .use-case-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .use-case-content {
+            padding: 1.5rem;
+        }
+        
+        .use-case-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .use-case-content p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        /* Testimonial */
+        .testimonial {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .testimonial-quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-role {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.featured {
+            background: var(--dark);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.08);
+        }
+        
+        .pricing-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .pricing-card.featured .pricing-features li {
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .pricing-btn {
+            display: block;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card .pricing-btn {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .pricing-card.featured .pricing-btn {
+            background: var(--accent);
+            color: var(--dark);
+        }
+        
+        /* CTA */
+        .cta {
+            padding: 6rem 2rem;
+            background: var(--white);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .cta-primary {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid var(--dark);
+            transition: all 0.3s;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--dark);
+            color: white;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo span {
+            color: var(--accent);
+        }
+        
+        .footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 4rem 2rem;
+            background: var(--dark);
+            text-align: center;
+        }
+        
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+        
+        .video-placeholder {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 4rem;
+            color: white;
+        }
+        
+        .video-placeholder h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .solution-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .problem-grid,
+            .use-cases-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 5rem 1rem 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .problem-grid,
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .solution-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">Molab<span>Screens</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#problem">Dlaczego?</a></li>
+                    <li><a href="#solution">Rozwiązanie</a></li>
+                    <li><a href="#pricing">Cennik</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">Bezpłatna konsultacja</a>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🐾 Dedykowane dla weterynarii</span>
+                <h1>17 minut <span>pełnej uwagi</span> właściciela zwierzęcia</h1>
+                <p>Wykorzystaj czas oczekiwania w poczekalni na edukację, budowanie zaufania i promocję usług. Ekran, który pracuje na Twój przychód.</p>
+                <a href="#contact" class="cta-btn" style="font-size: 1.1rem; padding: 1rem 2rem;">Zamów bezpłatną prezentację</a>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">7 600</div>
+                        <div class="stat-label">gabinetów w Polsce</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">17 min</div>
+                        <div class="stat-label">średni czas oczekiwania</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">+35%</div>
+                        <div class="stat-label">wzrost upsellingu</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-poczekalnia.png" alt="Poczekalnia weterynarza z ekranem digital signage">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Problem</div>
+                <h2>Właściciel czeka. Stresuje się. Nic nie kupuje.</h2>
+                <p>Typowa poczekalnia to stracona szansa na komunikację z klientem i budowanie wartości wizyty.</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😰</div>
+                    <h3>Stres właściciela</h3>
+                    <p>Właściciel martwi się o pupila. Pusty ekran lub stara telewizja nie pomagają.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❓</div>
+                    <h3>Brak wiedzy</h3>
+                    <p>Klienci nie wiedzą o dostępnych usługach, profilaktyce, diecie specjalistycznej.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Utracone przychody</h3>
+                    <p>Stomatologia, pakiety profilaktyczne, premium karmy — usługi, o których klient nie wie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Banner -->
+    <div class="stats-banner">
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number">83%</div>
+                <div class="stat-label">właścicieli zapamięta treść z ekranu</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">-35%</div>
+                <div class="stat-label">postrzegany czas oczekiwania</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">+29%</div>
+                <div class="stat-label">wzrost wartości wizyty</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2-3x</div>
+                <div class="stat-label">więcej pytań o usługi dodatkowe</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Solution -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <div class="section-tag">Rozwiązanie</div>
+                    <h2>Ekran, który <span>leczy Twój biznes</span></h2>
+                    <p>Digital signage zaprojektowany specjalnie dla gabinetów weterynaryjnych. Edukuje, uspokaja, sprzedaje — podczas gdy Ty zajmujesz się pacjentami.</p>
+                    
+                    <ul class="benefits-list">
+                        <li>
+                            <div class="benefit-icon">🦷</div>
+                            <div class="benefit-text">
+                                <h4>Promocja stomatologii</h4>
+                                <p>80% psów ma choroby przyzębia. Pokaż problem i rozwiązanie.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon">💉</div>
+                            <div class="benefit-text">
+                                <h4>Pakiety profilaktyczne</h4>
+                                <p>Szczepienia + odrobaczanie + badanie w atrakcyjnej cenie pakietowej.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon">🍖</div>
+                            <div class="benefit-text">
+                                <h4>Retail: karmy i suplementy</h4>
+                                <p>Rekomendacja lekarza na ekranie = zaufanie = sprzedaż.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon">📅</div>
+                            <div class="benefit-text">
+                                <h4>Sezonowe kampanie</h4>
+                                <p>Kleszcze wiosną, odrobaczanie jesienią — automatyczna rotacja treści.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="solution-gallery">
+                    <img src="images/screen-stomatologia.png" alt="Ekran stomatologia">
+                    <img src="images/screen-pakiet.png" alt="Ekran pakiet profilaktyczny">
+                    <img src="images/screen-sezon-kleszcze.png" alt="Ekran sezon na kleszcze">
+                    <img src="images/screen-karma.png" alt="Ekran karma premium">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Zastosowania</div>
+                <h2>Co wyświetlać na ekranie?</h2>
+                <p>Gotowe szablony dla każdej sytuacji — od powitania po edukację zdrowotną.</p>
+            </div>
+            
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <img src="images/screen-stomatologia.png" alt="Stomatologia">
+                    <div class="use-case-content">
+                        <h3>🦷 Stomatologia</h3>
+                        <p>Promocje, edukacja o higienie jamy ustnej zwierząt</p>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <img src="images/screen-pakiet.png" alt="Pakiety">
+                    <div class="use-case-content">
+                        <h3>💉 Pakiety profilaktyczne</h3>
+                        <p>Bundlowane usługi w atrakcyjnych cenach</p>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <img src="images/screen-sezon-kleszcze.png" alt="Sezonowe">
+                    <div class="use-case-content">
+                        <h3>🌿 Kampanie sezonowe</h3>
+                        <p>Kleszcze, odrobaczanie, zimowa profilaktyka</p>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <img src="images/screen-karma.png" alt="Retail">
+                    <div class="use-case-content">
+                        <h3>🍖 Produkty premium</h3>
+                        <p>Karmy i suplementy polecane przez lekarza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <div class="container">
+            <p class="testimonial-quote">"Od kiedy mamy ekran w poczekalni, klienci sami pytają o stomatologię i pakiety profilaktyczne. Średnia wartość wizyty wzrosła o 180 zł. Ekran zwrócił się w 2 miesiące."</p>
+            <div class="testimonial-author">dr n. wet. Anna Kowalska</div>
+            <div class="testimonial-role">właścicielka kliniki weterynaryjnej, Gdańsk</div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Cennik</div>
+                <h2>Inwestycja, która się zwraca</h2>
+                <p>Wybierz pakiet dopasowany do wielkości gabinetu</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Tablet</div>
+                    <div class="pricing-price">1 500 zł<span> jednorazowo</span></div>
+                    <ul class="pricing-features">
+                        <li>✓ Tablet 10" z uchwytem</li>
+                        <li>✓ Konfiguracja i montaż</li>
+                        <li>✓ 10 szablonów branżowych</li>
+                        <li>✓ Panel do zarządzania</li>
+                    </ul>
+                    <a href="#contact" class="pricing-btn">Wybierz</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-name">Telewizor</div>
+                    <div class="pricing-price">3 500 zł<span> jednorazowo</span></div>
+                    <ul class="pricing-features">
+                        <li>✓ TV 43" z mocowaniem</li>
+                        <li>✓ Konfiguracja i montaż</li>
+                        <li>✓ 20 szablonów branżowych</li>
+                        <li>✓ Panel do zarządzania</li>
+                        <li>✓ 3 miesiące obsługi gratis</li>
+                    </ul>
+                    <a href="#contact" class="pricing-btn">Najpopularniejszy</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-name">Własny ekran</div>
+                    <div class="pricing-price">500 zł<span> jednorazowo</span></div>
+                    <ul class="pricing-features">
+                        <li>✓ Konfiguracja Twojego TV</li>
+                        <li>✓ Stick lub box do wyświetlania</li>
+                        <li>✓ 10 szablonów branżowych</li>
+                        <li>✓ Panel do zarządzania</li>
+                    </ul>
+                    <a href="#contact" class="pricing-btn">Wybierz</a>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; color: var(--gray);">
+                + miesięczna obsługa od <strong>150 zł netto</strong> (samodzielna) do <strong>500 zł netto</strong> (z grafikami)
+            </p>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Gotowy na wzrost przychodu?</h2>
+            <p>Zamów bezpłatną prezentację i zobacz jak ekran może pracować na Twój gabinet.</p>
+            <div class="cta-buttons">
+                <a href="mailto:kontakt@molab.pl?subject=Molab%20Screens%20-%20Weterynaria" class="cta-primary">Zamów prezentację</a>
+                <a href="tel:+48123456789" class="cta-secondary">Zadzwoń: 123 456 789</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="logo footer-logo">Molab<span>Screens</span></div>
+        <p>Digital signage dla gabinetów weterynaryjnych</p>
+        <p style="margin-top: 1rem;">© 2026 Molab. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+    
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
