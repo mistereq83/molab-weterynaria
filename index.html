@@ -53,13 +53,19 @@
         }
         
         .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--primary);
+            display: flex;
+            align-items: center;
         }
         
-        .logo span {
-            color: var(--accent);
+        .logo-img {
+            height: 32px;
+            width: auto;
+        }
+        
+        .footer-logo-img {
+            height: 28px;
+            width: auto;
+            filter: brightness(0) invert(1);
         }
         
         .nav-links {
@@ -729,7 +735,7 @@
     <!-- Header -->
     <header class="header">
         <div class="header-inner">
-            <div class="logo">Molab<span>Screens</span></div>
+            <div class="logo"><img src="molab-screens-logo.png" alt="Molab Screens" class="logo-img"></div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#problem">Dlaczego?</a></li>
@@ -992,7 +998,7 @@
     
     <!-- Footer -->
     <footer class="footer">
-        <div class="logo footer-logo">Molab<span>Screens</span></div>
+        <div class="logo footer-logo"><img src="molab-screens-logo.png" alt="Molab Screens" class="footer-logo-img"></div>
         <p>Digital signage dla gabinetów weterynaryjnych</p>
         <p style="margin-top: 1rem;">© 2026 Molab. Wszystkie prawa zastrzeżone.</p>
     </footer>
